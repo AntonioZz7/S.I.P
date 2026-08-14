@@ -112,7 +112,7 @@ nav a:hover {
 /* LOGO DIN MIJLOCUL ECRANULUI */
 
 .hero-logo {
-    width: 100px;
+    width: 200px;
     height: auto;
     display: block;
     object-fit: contain;
