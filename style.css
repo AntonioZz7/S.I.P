@@ -1,0 +1,965 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 700;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #fff;
+    color: #111;
+    line-height: 1.6;
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+header {
+    background: #000;
+    color: #fff;
+
+    padding: 18px 8%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    position: sticky;
+    top: 0;
+
+    z-index: 1000;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    height: 80px;
+    width: auto;
+
+    display: block;
+    object-fit: contain;
+}
+
+
+/* =========================================================
+   NAVIGATION
+========================================================= */
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+nav a {
+    color: #fff;
+
+    text-decoration: none;
+
+    transition: 0.3s ease;
+
+    font-weight: 700;
+}
+
+nav a:hover {
+    color: #ff4fa3;
+}
+
+
+/* =========================================================
+   HERO SECTION
+========================================================= */
+
+.hero {
+    min-height: 130vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    padding: 40px;
+
+    color: #fff;
+
+    /* IMAGINEA DE FUNDAL */
+    background-image:
+        linear-gradient(
+            rgba(0, 0, 0, 0.55),
+            rgba(0, 0, 0, 0.55)
+        ),
+        url("images/hero-bg.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    position: relative;
+}
+
+
+/* =========================================================
+   HERO CONTENT
+========================================================= */
+
+.hero-content {
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    /*
+       CASETA ALBĂ TRANSPARENTĂ
+    */
+
+    background: rgba(255, 255, 255, 0.3);
+
+    padding: 45px 55px;
+
+    border-radius: 25px;
+
+    /*
+       EFECT DE BLUR ÎN SPATELE CASETEI
+    */
+
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+
+    /*
+       UȘOARĂ BORDURĂ
+    */
+
+    border: 1px solid rgba(255, 255, 255, 0.9);
+
+    /*
+       UMBRĂ
+    */
+
+    box-shadow:
+        0 20px 60px rgba(0, 0, 0, 0.35);
+
+    max-width: 850px;
+
+    width: 100%;
+}
+
+
+/* =========================================================
+   HERO LOGO
+========================================================= */
+
+.hero-logo {
+    width: 250px;
+
+    height: auto;
+
+    display: block;
+
+    object-fit: contain;
+
+    margin-bottom: 30px;
+}
+
+
+/* =========================================================
+   HERO TITLE
+========================================================= */
+
+.hero h1 {
+    font-size: 3rem;
+
+    margin-bottom: 15px;
+
+    font-weight: 700;
+
+    color: #111;
+
+    line-height: 1.2;
+}
+
+.hero span {
+    color: #ff4fa3;
+
+    font-weight: 700;
+}
+
+
+/* =========================================================
+   HERO DESCRIPTION
+========================================================= */
+
+.hero p {
+    max-width: 700px;
+
+    margin: 0 auto;
+
+    font-weight: 700;
+
+    color: #222;
+
+    font-size: 1.05rem;
+}
+
+
+/* =========================================================
+   BUTTON
+========================================================= */
+
+.btn {
+    display: inline-block;
+
+    margin-top: 20px;
+
+    padding: 12px 25px;
+
+    background: #ff4fa3;
+
+    color: #fff;
+
+    border-radius: 8px;
+
+    text-decoration: none;
+
+    transition: 0.3s ease;
+
+    font-weight: 700;
+
+    box-shadow:
+        0 5px 15px rgba(255, 79, 163, 0.25);
+}
+
+.btn:hover {
+    background: #ff2f91;
+
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 8px 20px rgba(255, 47, 145, 0.35);
+}
+
+
+/* =========================================================
+   GENERAL SECTIONS
+========================================================= */
+
+section {
+    padding: 70px 8%;
+}
+
+.title {
+    text-align: center;
+
+    margin-bottom: 35px;
+}
+
+.title h2 {
+    color: #ff4fa3;
+
+    font-size: 2.2rem;
+
+    font-weight: 700;
+}
+
+
+/* =========================================================
+   ABOUT
+========================================================= */
+
+.about {
+    max-width: 850px;
+
+    margin: auto;
+
+    text-align: center;
+}
+
+.about p {
+    font-weight: 700;
+}
+
+
+/* =========================================================
+   SERVICES
+========================================================= */
+
+.grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fit, minmax(230px, 1fr));
+
+    gap: 20px;
+}
+
+.card {
+    background: #f6f6f6;
+
+    padding: 20px;
+
+    border-radius: 10px;
+
+    transition: 0.3s ease;
+
+    text-align: center;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+.card h3 {
+    color: #ff4fa3;
+
+    margin-bottom: 8px;
+
+    font-weight: 700;
+}
+
+.card p {
+    font-weight: 700;
+}
+
+
+/* =========================================================
+   PRODUCTS
+========================================================= */
+
+#products {
+    background: #fff;
+}
+
+.products-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(5, 1fr);
+
+    gap: 25px;
+
+    max-width: 1400px;
+
+    margin: 0 auto;
+}
+
+
+/* =========================================================
+   PRODUCT CARD
+========================================================= */
+
+.product-card {
+    background: #f6f6f6;
+
+    border-radius: 12px;
+
+    overflow: hidden;
+
+    cursor: pointer;
+
+    transition: 0.3s ease;
+
+    border: 2px solid transparent;
+}
+
+.product-card:hover {
+    transform: translateY(-7px);
+
+    border-color: #ff4fa3;
+
+    box-shadow:
+        0 12px 30px rgba(0, 0, 0, 0.12);
+}
+
+
+/* =========================================================
+   PRODUCT IMAGE
+========================================================= */
+
+.product-image {
+    width: 100%;
+
+    height: 210px;
+
+    background: #fff;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    overflow: hidden;
+}
+
+.product-image img {
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: contain;
+
+    display: block;
+
+    transition: 0.3s ease;
+}
+
+.product-card:hover .product-image img {
+    transform: scale(1.05);
+}
+
+
+/* =========================================================
+   PRODUCT INFORMATION
+========================================================= */
+
+.product-info {
+    text-align: center;
+
+    padding: 15px 10px 18px;
+}
+
+.product-info h3 {
+    color: #111;
+
+    font-size: 1.05rem;
+
+    margin-bottom: 5px;
+
+    font-weight: 700;
+}
+
+.product-info p {
+    color: #ff4fa3;
+
+    font-size: 1.1rem;
+
+    font-weight: 700;
+}
+
+
+/* =========================================================
+   PRODUCT POPUP / MODAL
+========================================================= */
+
+.product-modal {
+    position: fixed;
+
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background:
+        rgba(0, 0, 0, 0.75);
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    padding: 20px;
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    transition: 0.3s ease;
+
+    z-index: 5000;
+}
+
+
+/* =========================================================
+   POPUP ACTIVE
+========================================================= */
+
+.product-modal.active {
+    opacity: 1;
+
+    visibility: visible;
+}
+
+
+/* =========================================================
+   MODAL CONTENT
+========================================================= */
+
+.modal-content {
+    position: relative;
+
+    width: 100%;
+
+    max-width: 650px;
+
+    max-height: 90vh;
+
+    overflow-y: auto;
+
+    background: #fff;
+
+    border-radius: 15px;
+
+    padding: 30px;
+
+    text-align: center;
+
+    transform: scale(0.8);
+
+    transition: 0.3s ease;
+}
+
+.product-modal.active .modal-content {
+    transform: scale(1);
+}
+
+
+/* =========================================================
+   MODAL IMAGE
+========================================================= */
+
+.modal-content img {
+    width: 100%;
+
+    max-width: 450px;
+
+    height: 300px;
+
+    object-fit: contain;
+
+    display: block;
+
+    margin: 0 auto 20px;
+}
+
+
+/* =========================================================
+   MODAL TITLE
+========================================================= */
+
+.modal-content h2 {
+    color: #111;
+
+    font-size: 2rem;
+
+    margin-bottom: 8px;
+
+    font-weight: 700;
+}
+
+
+/* =========================================================
+   MODAL PRICE
+========================================================= */
+
+.modal-price {
+    color: #ff4fa3;
+
+    font-size: 1.5rem;
+
+    margin-bottom: 15px;
+
+    font-weight: 700;
+}
+
+
+/* =========================================================
+   MODAL DESCRIPTION
+========================================================= */
+
+.modal-content > p {
+    color: #333;
+
+    max-width: 500px;
+
+    margin: 0 auto 15px;
+
+    font-weight: 700;
+}
+
+
+/* =========================================================
+   MODAL CLOSE BUTTON
+========================================================= */
+
+.modal-close {
+    position: absolute;
+
+    top: 12px;
+    right: 15px;
+
+    width: 40px;
+    height: 40px;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background: #ff4fa3;
+
+    color: #fff;
+
+    font-size: 28px;
+
+    line-height: 40px;
+
+    cursor: pointer;
+
+    transition: 0.3s ease;
+
+    font-weight: 700;
+}
+
+.modal-close:hover {
+    background: #ff2f91;
+
+    transform: rotate(90deg);
+}
+
+
+/* =========================================================
+   CONTACT
+========================================================= */
+
+.contact {
+    text-align: center;
+}
+
+.contact p {
+    margin-bottom: 8px;
+
+    font-weight: 700;
+}
+
+.contact a {
+    color: #ff4fa3;
+
+    text-decoration: none;
+
+    font-weight: 700;
+}
+
+.contact a:hover {
+    text-decoration: underline;
+}
+
+
+/* =========================================================
+   WHATSAPP
+========================================================= */
+
+.whatsapp {
+    display: inline-block;
+
+    margin-top: 15px;
+
+    background: #25D366;
+
+    color: #fff !important;
+
+    padding: 12px 20px;
+
+    border-radius: 8px;
+
+    text-decoration: none !important;
+
+    transition: 0.3s ease;
+
+    font-weight: 700;
+}
+
+.whatsapp:hover {
+    background: #1ebe5d;
+
+    transform: translateY(-3px);
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+footer {
+    background: #000;
+
+    color: #fff;
+
+    text-align: center;
+
+    padding: 18px;
+
+    margin-top: 40px;
+}
+
+footer p {
+    font-weight: 700;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1100px) {
+
+    .products-grid {
+        grid-template-columns:
+            repeat(3, 1fr);
+    }
+
+}
+
+
+/* =========================================================
+   SMALL TABLET
+========================================================= */
+
+@media (max-width: 768px) {
+
+    header {
+        padding: 15px 5%;
+    }
+
+    .logo img {
+        height: 60px;
+    }
+
+    nav {
+        display: none;
+    }
+
+
+    /* HERO */
+
+    .hero {
+        min-height: 80vh;
+
+        padding: 30px 20px;
+
+        background-position: center;
+    }
+
+
+    .hero-content {
+        padding: 35px 25px;
+
+        border-radius: 20px;
+    }
+
+
+    .hero-logo {
+        width: 220px;
+
+        margin-bottom: 25px;
+    }
+
+
+    .hero h1 {
+        font-size: 2.2rem;
+    }
+
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+
+    section {
+        padding: 55px 5%;
+    }
+
+
+    .title h2 {
+        font-size: 2rem;
+    }
+
+
+    /* PRODUCTS */
+
+    .products-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+
+        gap: 18px;
+    }
+
+
+    .product-image {
+        height: 190px;
+    }
+
+
+    /* MODAL */
+
+    .modal-content {
+        padding: 25px;
+    }
+
+
+    .modal-content img {
+        height: 250px;
+    }
+
+
+    .modal-content h2 {
+        font-size: 1.7rem;
+    }
+
+}
+
+
+/* =========================================================
+   SMALL PHONES
+========================================================= */
+
+@media (max-width: 480px) {
+
+    .logo img {
+        height: 50px;
+    }
+
+
+    /* HERO */
+
+    .hero {
+        padding: 25px 15px;
+
+        min-height: 85vh;
+    }
+
+
+    .hero-content {
+        padding: 30px 18px;
+
+        border-radius: 18px;
+    }
+
+
+    .hero-logo {
+        width: 180px;
+
+        margin-bottom: 20px;
+    }
+
+
+    .hero h1 {
+        font-size: 1.8rem;
+
+        line-height: 1.25;
+    }
+
+
+    .hero p {
+        font-size: 0.95rem;
+    }
+
+
+    .btn {
+        padding: 10px 20px;
+    }
+
+
+    section {
+        padding: 45px 5%;
+    }
+
+
+    .title h2 {
+        font-size: 1.8rem;
+    }
+
+
+    .grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    /* PRODUCTS */
+
+    .products-grid {
+        grid-template-columns: 1fr;
+
+        gap: 20px;
+    }
+
+
+    .product-image {
+        height: 240px;
+    }
+
+
+    .product-info h3 {
+        font-size: 1.1rem;
+    }
+
+
+    .product-info p {
+        font-size: 1.15rem;
+    }
+
+
+    /* MODAL */
+
+    .product-modal {
+        padding: 15px;
+    }
+
+
+    .modal-content {
+        padding: 20px 15px;
+
+        max-height: 90vh;
+    }
+
+
+    .modal-content img {
+        height: 220px;
+    }
+
+
+    .modal-content h2 {
+        font-size: 1.5rem;
+    }
+
+
+    .modal-price {
+        font-size: 1.3rem;
+    }
+
+
+    .modal-content > p {
+        font-size: 0.9rem;
+    }
+
+
+    .modal-close {
+        width: 35px;
+
+        height: 35px;
+
+        line-height: 35px;
+
+        font-size: 24px;
+
+        top: 8px;
+
+        right: 8px;
+    }
+
+}
